@@ -2,17 +2,25 @@ let fechaActual = new Date();
 let horaActual = fechaActual.getHours();
 
 function verificarGenero(nombre, genero, edad) {
+  let horario = "";
+  if (horaActual > 12 && horaActual <= 19) {
+    horario = "Buenas Tardes";
+  } else if (horaActual >= 24 && horaActual < 12) {
+    horario = "Buenos Dias";
+  } else if (horaActual > 19 && horaActual < 24) {
+    horario = "Buenas Noches";
+  }
   if (genero == "M") {
     if (edad > 30) {
-      return "Buenas Tardes Señor " + nombre;
+      return horario + " Señor " + nombre;
     } else {
-      return "Hola joven " + nombre;
+      return horario + " joven " + nombre;
     }
   } else if (genero == "F") {
     if (edad > 30) {
-      return "Hola Señora " + nombre;
+      return horario + " Señora " + nombre;
     } else {
-      return "Hola jovencita " + nombre;
+      return horario + " jovencita " + nombre;
     }
   }
 }
