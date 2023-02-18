@@ -36,13 +36,13 @@ function verificarGenero(nombre, genero, edad, idioma) {
       if (edad > 30) {
         return horario + " Sir " + nombre;
       } else {
-        return horario + nombre;
+        return horario + " " + nombre;
       }
     } else if (genero == "F") {
       if (edad > 30) {
         return horario + " Miss " + nombre;
       } else {
-        return horario + nombre;
+        return horario + " " + nombre;
       }
     }
   }
