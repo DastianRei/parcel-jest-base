@@ -2,10 +2,10 @@
   "name": "parcel-jest-base",
   "version": "1.0.0",
   "description": "",
-  "default": "index-saludador.html",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index-saludador.html",
-    "build": "parcel build index-saludador.html",
+    "build": "parcel build index.html",
     "test": "jest --watch",
     "test-once": "jest --verbose --coverage",
     "cypress": "cypress open",
