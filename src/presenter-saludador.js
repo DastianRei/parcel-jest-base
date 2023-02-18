@@ -1,4 +1,4 @@
-import sumar from "./sumador";
+import verificarGenero from "./verificar-datos";
 
 const nombre = document.querySelector("#primer-nombre");
 const edad = document.querySelector("#edad");
@@ -10,5 +10,6 @@ const div = document.querySelector("#saludador-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  div.innerHTML = "<p>" + "Hola " + nombre.value + edad.value + genero.value + "</p>";
+  div.innerHTML =
+    "<p>" + verificarGenero(nombre.value, genero.value, edad.value) + "</p>";
 });
